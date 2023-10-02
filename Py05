@@ -1,0 +1,19 @@
+students = {
+    "202301": "张三",
+    "202302": "李四",
+    "202303": "王五",
+    "202304": "赵六",
+    "202305": "钱七"
+}
+
+# 删除学号尾号为偶数的元素
+keys_to_delete = []
+for key in students.keys():
+    if int(key[-1]) % 2 == 0:
+        keys_to_delete.append(key)
+
+for key in keys_to_delete:
+    del students[key]
+
+# 输出dict
+print(students)
