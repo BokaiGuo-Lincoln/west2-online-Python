@@ -1,0 +1,4 @@
+lst = input("请输入一个包含字符串和整数的列表（以空格分隔）：").split()
+lst = [int(x) for x in lst if x.isnumeric()]  # 列表解析式过滤出整数，并转换为int类型
+lst.sort()  # 排序
+print(lst)
