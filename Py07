@@ -1,0 +1,29 @@
+class Commodity:
+    def __init__(self, serial_number, name, price, total_quantity, remaining_quantity):
+        self.__serial_number = serial_number
+        self.__name = name
+        self.__price = price
+        self.__total_quantity = total_quantity
+        self.__remaining_quantity = remaining_quantity
+
+    def display(self):
+        print("商品序号:", self.__serial_number)
+        print("商品名:", self.__name)
+        print("单价:", self.__price)
+        print("总数量:", self.__total_quantity)
+        print("剩余数量:", self.__remaining_quantity)
+
+    def income(self):
+        return self.__total_quantity - self.__remaining_quantity
+
+    def setdata(self, serial_number=None, name=None, price=None, total_quantity=None, remaining_quantity=None):
+        if serial_number is not None:
+            self.__serial_number = serial_number
+        if name is not None:
+            self.__name = name
+        if price is not None:
+            self.__price = price
+        if total_quantity is not None:
+            self.__total_quantity = total_quantity
+        if remaining_quantity is not None:
+            self.__remaining_quantity = remaining_quantity
